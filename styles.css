@@ -120,8 +120,10 @@
 .mobile-menu {
     padding: 24px;
     position: absolute;
-    top: 60px;
-    width: 78%;
+    top: 61px;
+    left: 0;
+    width: calc(100% - 48px);
+    background-color: var(--white);
 }
 .mobile-menu a {
     text-decoration: none;
@@ -157,7 +159,9 @@
     box-sizing: border-box;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 61px;
+    background-color: var(--white);
+    box-shadow:0 3px 10px var(--very-light-pink);
   }
   .title-container {
     display: flex;

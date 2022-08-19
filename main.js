@@ -47,7 +47,7 @@ for (product of productsList) {
 
     cardImg = document.createElement('img')
     cardImg.setAttribute('src', product.image)
-
+ 
     productInfo = document.createElement('div')
     productInfo.setAttribute('class','product-info')
 

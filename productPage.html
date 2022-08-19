@@ -23,10 +23,17 @@
       margin: 0;
       font-family: 'Quicksand', sans-serif;
     }
+    .product-page-container{
+      min-width: 320px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background-color: var(--white);
+    }
     .product-detail {
-      width: 360px;
-      padding-bottom: 24px;
-      position: absolute;
+      width:calc(100% - 28px);
+      padding: 24px 14px;
+      position: relative;
       right: 0;
     }
     .product-detail-close {
@@ -34,7 +41,7 @@
       width: 14px;
       height: 14px;
       position: absolute;
-      top: 24px;
+      top: 34px;
       left: 24px;
       z-index: 2;
       padding: 12px;
@@ -45,26 +52,26 @@
     }
     .product-detail > img:nth-child(2) {
       width: 100%;
-      height: 360px;
+      height: 350px;
       object-fit: cover;
-      border-radius: 0 0 20px 20px;
+      border-radius: 20px;
     }
-    .product-info {
+    .product-detail__product-info {
       margin: 24px 24px 0 24px;
     }
-    .product-info p:nth-child(1) {
+    .product-detail__product-info p:nth-child(1) {
       font-weight: bold;
       font-size: var(--md);
       margin-top: 0;
       margin-bottom: 4px;
     }
-    .product-info p:nth-child(2) {
+    .product-detail__product-info p:nth-child(2) {
       color: var(--very-light-pink);
       font-size: var(--md);
       margin-top: 0;
       margin-bottom: 36px;
     }
-    .product-info p:nth-child(3) {
+    .product-detail__product-info p:nth-child(3) {
       color: var(--very-light-pink);
       font-size: var(--sm);
       margin-top: 0;
@@ -86,28 +93,30 @@
       align-items: center;
       justify-content: center;
     }
-    @media (max-width: 640px) {
+    @media (min-width: 640px) {
       .product-detail {
-        width: 100%;
+        max-width: 768px;
       }
     }
   </style>
 </head>
 <body>
-  <aside class="product-detail">
-    <div class="product-detail-close">
-      <img src="./icons/icon_close.png" alt="close">
-    </div>
-    <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
-    <div class="product-info">
-      <p>$35,00</p>
-      <p>Bike</p>
-      <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
-      <button class="primary-button add-to-cart-button">
-        <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
-        Add to cart
-      </button>
-    </div>
-  </aside>
+  <section class="product-page-container">
+    <aside class="product-detail">
+      <div class="product-detail-close">
+        <img src="./icons/icon_close.png" alt="close">
+      </div>
+      <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+      <div class="product-detail__product-info">
+        <p>$35,00</p>
+        <p>Bike</p>
+        <p>With its practical position, this bike also fulfills a decorative function, add your hall or workspace.</p>
+        <button class="primary-button add-to-cart-button">
+          <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
+          Add to cart
+        </button>
+      </div>
+    </aside>
+  </section>
 </body>
 </html>
